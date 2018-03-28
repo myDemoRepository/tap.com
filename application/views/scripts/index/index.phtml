@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-xs-12">
+            <h3>Hit a link bellow:</h3>
+            <ul>
+                <li><a href="http://tap.com/click/?param1=new&param2=test2" target="_self">http://tap.com/click/?param1=new&amp;param2=test2</a></li>
+                <li><a href="http://tap.com/click/?param1=get" target="_self">http://tap.com/click/?param1=get</a></li>
+                <li><a href="http://tap.com/click/?param1=all&param2=set" target="_self">http://tap.com/click/?param1=all&amp;param2=set</a></li>
+                <li><a href="http://tap.com/click/?param1=new&param2=get" target="_self">http://tap.com/click/?param1=new&amp;param2=get</a></li>
+                <li><a href="http://tap.com/click/?param1=23&param2=342" target="_self">http://tap.com/click/?param1=23&amp;param2=342</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-6 col-md-6 col-xs-12 bad-domains-block">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <input class="input-domain" id="domain" type="text" name="domain" placeholder="Add Domain Name Here" value="">
+                <button id="add-domain" class="btn btn-default bffbh input-domain" type="button" title="Refresh"><span class="icon glyphicon glyphicon-plus">&nbsp;Add domain</span></button>
+                <span id="domain-errors"></span>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12 ">
+                <h4>List of Bad Referrer Domains</h4>
+                <div class="bad-domains-list">
+                    <ul id="domains-list">
+                        <?php
+                        if (is_array($this->badDomainsList) && !empty($this->badDomainsList)) : ?>
+                            <?php foreach ($this->badDomainsList as $key => $value) : ?>
+                                <li><?= $value['name']; ?></li>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table id="grid-data" class="table table-condensed table-hover table-striped" data-toggle="bootgrid">
+        <thead>
+        <tr>
+            <th data-column-id="id" data-sortable="true" data-type="string">ID</th>
+            <th data-column-id="ua" data-sortable="true" data-type="string">User-Agent</th>
+            <th data-column-id="ip" data-sortable="true" data-type="string">IP</th>
+            <th data-column-id="ref" data-sortable="true" data-type="string">Refferer</th>
+            <th data-column-id="param1" data-sortable="true" data-type="string">Param 1</th>
+            <th data-column-id="param2" data-sortable="true" data-type="string">Param 2</th>
+            <th data-column-id="error" data-sortable="true" data-type="numeric">Error</th>
+            <th data-column-id="bad_domain" data-sortable="true" data-type="numeric">Bad Domain</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+
+

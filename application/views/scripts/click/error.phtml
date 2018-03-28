@@ -1,0 +1,34 @@
+<div class="container">
+    <?php if ($this->redirect) : ?>
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Soon you will be redirected to google.com</h1>
+                <input id="check-redirect" type="hidden" value="1" name="redirect">
+            </div>
+        </div>
+    <?php endif; ?>
+    <div class="row">
+        <div class="col-xs-12">
+            <span>Error, this page was already visited, <a href="<?= $this->baseUrl(); ?>">go back</a></span>
+            <br>
+            <span>Click info:</span>
+            <ul>
+                <li>Id - <?= $this->data['id']; ?></li>
+                <li>User-Agent - <?= $this->data['ua']; ?></li>
+                <li>IP - <?= $this->data['ip']; ?></li>
+                <li>Referrer - <?= $this->data['ref']; ?></li>
+                <li>Param 1 - <?= $this->data['param1']; ?></li>
+                <li>Param 2 - <?= $this->data['param2']; ?></li>
+                <li>Error - <?= $this->data['error']; ?></li>
+                <li>Bad Domain - <?= $this->data['bad_domain']; ?></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<?php if ($this->redirect) : ?>
+    <script type="text/javascript">
+        if (document.getElementById('check-redirect').value == 1){
+            setTimeout("window.location = 'https://google.com'", 5000);
+        }
+    </script>
+<?php endif; ?>

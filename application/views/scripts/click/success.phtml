@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <span>Success, this is your first visit, <a href="<?= $this->baseUrl(); ?>">go back</a></span>
+            <br>
+            <span>Click info:</span>
+            <ul>
+                <li>Id - <?= $this->data['id']; ?></li>
+                <li>User-Agent - <?= $this->data['ua']; ?></li>
+                <li>IP - <?= $this->data['ip']; ?></li>
+                <li>Referrer - <?= $this->data['ref']; ?></li>
+                <li>Param 1 - <?= $this->data['param1']; ?></li>
+                <li>Param 2 - <?= $this->data['param2']; ?></li>
+                <li>Error - <?= $this->data['error']; ?></li>
+                <li>Bad Domain - <?= $this->data['bad_domain']; ?></li>
+            </ul>
+        </div>
+    </div>
+</div>
