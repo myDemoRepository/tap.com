@@ -7,6 +7,7 @@ class IndexController extends Zend_Controller_Action
     {
         $badDomains = new Application_Model_BadDomains();
         $this->view->badDomainsList = $badDomains->getDomains();
+        $this->view->currentDomain = filter_input(INPUT_SERVER, 'SERVER_NAME');
     }
 
     /**

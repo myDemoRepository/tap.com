@@ -1,12 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.4.15.7
--- http://www.phpmyadmin.net
---
--- Хост: 127.0.0.1:3306
--- Время создания: Сен 18 2016 г., 22:44
--- Версия сервера: 10.1.14-MariaDB
--- Версия PHP: 5.6.23
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -19,8 +10,8 @@ SET time_zone = "+00:00";
 --
 -- База данных: `tap.com`
 --
-CREATE DATABASE IF NOT EXISTS `tapgerine` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `tapgerine`;
+CREATE DATABASE IF NOT EXISTS `tap` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `tap`;
 
 -- --------------------------------------------------------
 

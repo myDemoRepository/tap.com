@@ -23,7 +23,6 @@ class ClickController extends Zend_Controller_Action
         $clickModel = new Application_Model_Click();
         $clickModel->setParams($params);
         $url = $clickModel->getRedirectUrlAndSetClickParams();
-
         $this->_helper->getHelper('Redirector')->gotoUrl($url);
     }
 
@@ -58,6 +57,7 @@ class ClickController extends Zend_Controller_Action
         $id = $this->getRequest()->getParam('id');
         $clickModel = new Application_Model_Click();
         $result = $clickModel->getClickInfoById($id);
+        $this->view->currentDomain = filter_input(INPUT_SERVER, 'SERVER_NAME');
         $this->view->data = $result;
     }
 
@@ -72,5 +72,6 @@ class ClickController extends Zend_Controller_Action
         $result = $clickModel->getClickInfoById($id);
         $this->view->data = $result;
         $this->view->redirect = $clickModel->getRedirectValue();
+        $this->view->currentDomain = filter_input(INPUT_SERVER, 'SERVER_NAME');
     }
 }

@@ -2,18 +2,18 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Tap</title>
+        <title><?= $this->currentDomain; ?></title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="<?= $this->baseUrl(); ?>/css/style.css" type="text/css" media="screen, projection"/>
-        <link rel="stylesheet" href="<?= $this->baseUrl(); ?>/css/jquery.bootgrid.css" type="text/css" media="screen, projection"/>
+        <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection"/>
+        <link rel="stylesheet" href="/css/jquery.bootgrid.css" type="text/css" media="screen, projection"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="<?= $this->baseUrl(); ?>/js/jquery.bootgrid.js"></script>
-        <script src="<?= $this->baseUrl(); ?>/js/script.js"></script>
+        <script src="/js/jquery.bootgrid.js"></script>
+        <script src="/js/script.js"></script>
     </head>
     <body>
         <?= $this->layout()->content; ?>
